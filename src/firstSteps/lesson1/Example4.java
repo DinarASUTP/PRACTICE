@@ -1,4 +1,4 @@
-package firstSteps;
+package firstSteps.lesson1;
 import java.util.Scanner;
 
 public class Example4 {

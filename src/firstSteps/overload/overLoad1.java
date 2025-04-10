@@ -1,4 +1,4 @@
-package firstSteps;
+package firstSteps.overload;
 import java.util.Scanner;
 public class overLoad1 {
     public static void main(String[] args) {
