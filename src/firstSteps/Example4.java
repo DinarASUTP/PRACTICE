@@ -8,7 +8,6 @@ public class Example4 {
         int b = scan.nextInt();
         System.out.println(maxSumDigits(a, b));
     }
-
     static int maxSumDigits(int a, int b) {
         if (a > b) { //если диапазон не верно задан
             int tmp = a; //переставляем границы
@@ -27,7 +26,6 @@ public class Example4 {
         }
         return max;
     }
-
     static int sumDigits(int a) {
         int sum = 0;
         while (a > 0){
