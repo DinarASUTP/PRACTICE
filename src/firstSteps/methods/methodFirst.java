@@ -1,4 +1,4 @@
-package firstSteps;
+package firstSteps.methods;
 import java.util.Scanner;
 public class methodFirst {
     public static void main(String[] args) {
