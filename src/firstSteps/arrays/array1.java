@@ -7,21 +7,23 @@ public class array1 {
         Scanner scan = new Scanner(System.in);
         int l = scan.nextInt();
         int seed = scan.nextInt();
-        int []a = new int[l];
-        int sum = 0;
+        double []a = new double[l];
+        double sum = 0;
         double mux = 1;
         Random random = new Random(seed);
         for (int i = 0; i < a.length; i++){
-            a[i] = random.nextInt(-5,6);
-            if (a[i] > 0){
-                sum+=a[i];
-            }
-            if (a[i] < 0){
-                mux = mux * a[i];
-            }
-            System.out.printf("%d ",a[i]);
+            a[i] = random.nextDouble(0,5);
+            sum+=a[i];
+            System.out.printf("%.2f ",a[i]);
         }
         System.out.println();
-        System.out.printf("%d %.1f",sum,mux);
+        double srAref = sum / l;
+        System.out.printf("%.2f\n",srAref);
+        for (int i = 0; i < a.length; i++){
+            if (a[i]>srAref){
+                a[i]=srAref;
+            }
+            System.out.printf("%.2f ",a[i]);
+        }
     }
 }
