@@ -18,7 +18,7 @@ public class array4 {
         int max = a[0];
         int imax = 0;
         for (int i = 0; i <a.length ; i++) {
-            if (a[i]>=max){
+            if (a[i]>max){
                 max = a[i];
                 imax = i;
             }
@@ -27,9 +27,11 @@ public class array4 {
                 minInd = i;
             }
         }
-        int tmp = a[minInd];
-        a[minInd]=a[imax];
-        a[imax] = tmp;
+        if (a[minInd]<0) {
+            int tmp = a[minInd];
+            a[minInd] = a[imax];
+            a[imax] = tmp;
+        }
         for (int i = 0; i <a.length ; i++) {
             System.out.print(a[i]+" ");
         }
