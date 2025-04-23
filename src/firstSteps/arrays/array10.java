@@ -1,7 +1,7 @@
 package firstSteps.arrays;
 import java.util.Random;
 import java.util.Scanner;
-public class array9 {
+public class array10 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
@@ -16,17 +16,15 @@ public class array9 {
             }
             System.out.println();
         }
-        System.out.println();
-        int[] mas1 = new int[b];
-        for (int i = 0; i < mas.length; i++) {
+        for (int i = 0; i < mas.length; i++) {;
             for (int j = 0; j < mas[i].length; j++) {
-                if (mas[i][j]>0) {
-                    mas1[j] = mas1[j] + mas[i][j];
+                if (mas[i][j]<0){
+                    System.out.println(j);
+                    break;
+                } else if (j == mas[i].length - 1){
+                    System.out.println("NO");
                 }
             }
-        }
-        for (int i = 0; i < mas1.length; i++) {
-            System.out.print(mas1[i] + " ");
         }
     }
 }
