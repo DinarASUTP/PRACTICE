@@ -3,7 +3,7 @@ package firstSteps.arrays.methods;
 import java.util.Random;
 import java.util.Scanner;
 
-public class arraymethod1 {
+public class arrayMethod1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int kol = sc.nextInt();
