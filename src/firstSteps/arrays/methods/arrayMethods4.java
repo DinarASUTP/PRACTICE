@@ -31,19 +31,19 @@ public class arrayMethods4 {
         }
     }
     public static int[][] deleteRow (int mas[][], int ind){
-        if (ind < 0 || ind > mas.length){
+        if (ind < 0 || ind >= mas.length){
             return mas;
         }
         int a[][] =  new int [mas.length-1][mas[0].length];
 
-        for (int i = 0; i < ind; i++) { //переписываем все до k-й строки
+        for (int i = 0; i < ind; i++) {
             for (int j = 0; j < mas[i].length; j++) {
                 a[i][j] = mas[i][j];
             }
         }
-        for (int i = ind; i < mas.length; i++) { //переписываем от k-й строки до конца
+        for (int i = ind; i < a.length; i++) {
             for (int j = 0; j < mas[i].length; j++) {
-                a[i-1][j] = mas[i][j];
+                a[i][j] = mas[i+1][j];
             }
         }
         return a;
