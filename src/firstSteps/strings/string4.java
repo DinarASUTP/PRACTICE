@@ -12,7 +12,9 @@ public class string4 {
     }
     public static boolean isGMailAddress(String str){
         boolean result = false;
-        str.getChars(0,str.length(),char[] dst, );
+        String str1 = str.substring(str.length()-10,str.length());
+        String str2 = str.substring(0,str.length()-10);
+        result = (str1.equals("@gmail.com")) & (!str2.isEmpty()) & (!str2.contains("@"));
         return result;
     }
 }
