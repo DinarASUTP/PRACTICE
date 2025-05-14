@@ -6,18 +6,27 @@ public class stringBuilder2 {
         String str = scan.nextLine();
         str = str.trim();
         String[] words = str.split(" +");
-        String[] words1 = new String[words.length];
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < words1.length; i++){
-            for (int j = 1; j < words.length; j++){
-                if (words[i].substring(words[i].length()-1,words[i].length()).equalsIgnoreCase(words[j].substring(0,1))){
-                    words1[i+1] = words[j];
+        String wordEnds ="";
+        String wordStarts ="";
+        for (int i = 0; i < words.length-1; i++){
+            metka:
+            for (int j = i+1; j < words.length; j++){
+                wordEnds = words[i].substring(words[i].length()-1,words[i].length());
+                wordStarts = words[j].substring(0,1);
+                if (wordEnds.equalsIgnoreCase(wordStarts)){
+                    String tmpStr = words[j];
+                    words[j] =  words[i+1];
+                    words[i+1] = tmpStr;
+                    break metka;
                 }
             }
-            if (i == words1.length-1){
-                sb.append(words1[i]);
+        }
+        for (int i = 0; i < words.length; i++){
+            if (i == words.length-1){
+                sb.append(words[i]);
             } else {
-                sb.append(words1[i]).append(" ");
+                sb.append(words[i]).append(" ");
             }
         }
         System.out.println(sb);
