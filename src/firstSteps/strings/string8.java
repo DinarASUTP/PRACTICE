@@ -10,8 +10,7 @@ public class string8 {
         String str1 = "";
         for (int i = 0; i < words.length; i++){
             str1 = words[i].substring(0,1);
-            str1= str1.toUpperCase();
-
+            words[i]= str1.toUpperCase() + words[i].substring(1);
             result += words[i];
             result += " ";
         }
